@@ -20,7 +20,7 @@ export default function Blog({ data }) {
 
 export const query = graphql`
   {
-    allContentfulBlogPost(sort: {fields: publishDate, order: DESC}) {
+    allContentfulBlogPost(sort: { publishDate: DESC}) {
       nodes {
         title
         slug
