@@ -12,7 +12,7 @@ export default function Home({ data }) {
       <p>{home.subtitle}</p>
       {hero && <GatsbyImage image={hero} alt={home.title} />}
       <section style={{ marginTop: 20 }}>
-        {documentToReactComponents(JSON.parse(home.intro.raw))}
+        {documentToReactComponents(JSON.parse(home.intro))}
       </section>
     </main>
   )
@@ -23,7 +23,7 @@ export const query = graphql`
     contentfulHomepage {
       title
       subtitle
-      intro { raw }
+      intro 
       heroImage { gatsbyImageData(layout: CONSTRAINED, width: 1200) }
     }
   }
