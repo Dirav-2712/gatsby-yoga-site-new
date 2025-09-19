@@ -32,7 +32,7 @@ function convertToEmbed(url) {
 
 export const query = graphql`
   query {
-    allContentfulYogaClass(sort: {fields: title, order: ASC}) {
+    allContentfulYogaClass(sort: {title: ASC}) {
       nodes {
         title
         slug
